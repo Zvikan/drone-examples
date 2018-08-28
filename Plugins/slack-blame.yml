@@ -1,0 +1,12 @@
+  slack_blame:
+    image: plugins/slack-blame
+    secrets: [ slack_token ]
+    success_template: |
+      The build (${DRONE_BUILD_LINK}) is fixed! Thanks :) <@{{user.ID}}>
+    success_image_attachments:
+      - "http://i.imgur.com/TP4PIxc.jpg"
+    failure_template: |
+      The build is broken! (${DRONE_BUILD_LINK}) <@{{user.ID}}>
+    failure_image_attachments:
+      - "http://cdn.meme.am/instances/51000361.jpg"
+

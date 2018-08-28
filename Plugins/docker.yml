@@ -1,0 +1,8 @@
+  docker:
+    image: plugins/docker
+    repo: artifactory.rnd.qa/drone-poc/mars-base
+    registry: artifactory.rnd.qa
+    auto_tag: true
+    dockerfile: Dockerfile.marsbase
+    insecure: true
+    secrets: [ docker_username, docker_password ]
